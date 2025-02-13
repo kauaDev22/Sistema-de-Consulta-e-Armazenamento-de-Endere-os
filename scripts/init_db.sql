@@ -1,0 +1,13 @@
+CREATE DATABASE IF NOT EXISTS address_db;
+USE address_db;
+
+CREATE TABLE IF NOT EXISTS addresses (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  cep VARCHAR(10) NOT NULL,
+  logradouro VARCHAR(255),
+  complemento VARCHAR(255),
+  bairro VARCHAR(255),
+  localidade VARCHAR(255),
+  uf VARCHAR(2),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
